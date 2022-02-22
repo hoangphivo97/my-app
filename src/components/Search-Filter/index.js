@@ -1,37 +1,30 @@
 import React,{useState} from 'react';
+import JSONDATA from '../../MOCK_DATA.json';
 
 function SearchFilter(){
-    const list = [
-        "Banana",
-        "Apple",
-        "Watermelon",
-        "Orange",
-        "Pineapple",
-        "Mango"
-    ];
 
-    const [filterList,setFilterList] =useState(list);
+    const [filterList,setFilterList] =useState('');
 
     const handleSearch = (e) =>{
-        if(e.target.value === ''){
-            setFilterList(list);
-            return;
-        }
+        setFilterList(e.target.value);
 
-        const filteredValues = list.filter(
-            (item) => item.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1
-        )
-
-        setFilterList(filteredValues);
     };
+    const filteredValue = JSONDATA.filter((val)=>{
+        if(filterList === ""){
+            return val
+        }else if(val.animal_name.toLowerCase().includes(filterList.toLowerCase())){
+            return val
+        }
+    })
     return (
         <div className = "App">
             <div className='SearchFilter'>
                 Search: <input name='query' type='text' onChange={handleSearch}/>
             </div>
-            {filterList && filterList.map((item)=>(
-                <div>
-                    {item}
+            {
+            filteredValue.map((val,key)=>(
+                <div key={key}>
+                    {val.animal_name}
                 </div>
             ))}
         </div>
