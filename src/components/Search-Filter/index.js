@@ -19,14 +19,18 @@ function SearchFilter(){
     return (
         <div className = "App">
             <div className='SearchFilter'>
-                Search: <input name='query' type='text' onChange={handleSearch}/>
+                <input name='query' type='text' placeholder='Search...' onChange={handleSearch}/>
+                <p>
+                    {
+                    filteredValue.map((val,key)=>(
+                        <div key={key}>
+                            {val.animal_name}
+                        </div>
+                    ))}
+                </p>
+                
             </div>
-            {
-            filteredValue.map((val,key)=>(
-                <div key={key}>
-                    {val.animal_name}
-                </div>
-            ))}
+            
         </div>
     )
 }
