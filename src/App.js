@@ -19,9 +19,9 @@ function App() {
           </Button>
         </Link>
         |
-        <Link to ='/CounterTest'>
+        <Link to ='/List'>
           <Button variant="light">
-             Counter-exc2
+             List
           </Button>
         </Link>
         </nav>

@@ -73,51 +73,11 @@ $clr-positive:green;
       animation: pulse 500ms ease-in-out;
     }
   }
-  .CountTest{
-    margin: 0;
-    padding: 0;
+  .ShowList{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 88vh;
     align-items: center;
-    font-family: sans-serif;
-    h2{
-      font-size: 6rem;
-    }
-    .button_wrapper{
-      display: flex;
-      gap:1rem;
-      & > *{
-        border: none;
-        border-radius: 50%;
-        height: 4rem;
-        width: 4rem;
-        background-color: $clr-gray100;
-        font-weight: bold;
-        font-size: 2rem;
-        color: inherit;
-        box-shadow: 0px 0px 10px $clr-gray200;
-        outline: none;
-        transition: 
-          background-color 250ms ease-in-out;
-          transform: 50ms ease-in-out;
-        &:hover{
-          background-color: $clr-gray200;
-        }
-        &:active{
-          transform: scale(0.9);
-        }
-      }
-    }
-    .btn-positive{
-      color:$clr-positive;
-      animation: pulse 500ms ease-in-out;
-    }
-    .btn-negative{
-      color:$clr-negative;
-      animation: pulse 500ms ease-in-out;
-    }
   }
 }
 @keyframes pulse{

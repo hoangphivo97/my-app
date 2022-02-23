@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SearchFilter from './components/Search-Filter';
 import Counter from './components/Counter';
-import CounterTest from './components/Counter-test';
+import List from './components/List';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +16,7 @@ ReactDOM.render(
         <Route path="/" element={<App/>}>
           <Route path='/Search-filter' element={<SearchFilter/>}/>  
           <Route path='/Counter' element={<Counter/>}/> 
-          <Route path='/CounterTest' element={<CounterTest/>}/> 
+          <Route path='/List' element={<List/>}/> 
         </Route>
       </Routes>
     </BrowserRouter>
