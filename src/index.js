@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SearchFilter from './components/Search-Filter';
 import Counter from './components/Counter';
 import List from './components/List';
+import FAQ from './components/Faq'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
           <Route path='/Search-filter' element={<SearchFilter/>}/>  
           <Route path='/Counter' element={<Counter/>}/> 
           <Route path='/List' element={<List/>}/> 
+          <Route path='/FAQ' element={<FAQ/>}/> 
         </Route>
       </Routes>
     </BrowserRouter>
